@@ -33,7 +33,10 @@ class App extends React.Component {
                 {isLoginActive && <Login containerRef={(ref) => this.current = ref}/>}
                 {!isLoginActive && <Register containerRef={(ref) => this.current = ref}/>}
             </div>
-            <RightSide current={current} containerRef={ref => this.rightSide = ref} onClick={this.changeState.bind(this)}/>
+            <RightSide current={current}
+                       currentActive={currentActive}
+                       containerRef={ref => this.rightSide = ref}
+                       onClick={this.changeState.bind(this)}/>
           </div>
         </div>
     )
